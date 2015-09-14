@@ -35,7 +35,7 @@ $(document).ready(function () {
     });
 });
 
-$(function () {
+$(document).ready(function () {
     $('.loginbutton').click(function (event) {
         event.preventDefault();
         var inputs = $('input');
