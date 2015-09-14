@@ -26,8 +26,24 @@ $(document).ready(function (){
     });
 });
 
-$(document).ready(function (){
-    $(document).on("click", ".loginbutton", function (){
-      $('   <tr>                    <td>'+$('#textname').val()+'</td>                    <td>'+$('#textlogin').val()+'</td>                    <td>'+$('#textemail').val()+'</td>                </tr>').insertAfter(".insert");
+$(document).ready(function () {
+    $(document).on("click", ".loginbutton", function () {
+        $('   <tr>                    <td>' + $('#textname').val() + '</td>                    <td>' + $('#textlogin').val() + '</td>                    <td>' + $('#textemail').val() + '</td>                </tr>').insertAfter(".insert");
+        var contentId = '#section1';
+        $('.tab-nav a').removeClass("active");
+        $('.tabs .tab-nav a[href=#section1]').addClass("active");
+
+        $('.tab-content .section').hide();
+
+        $(contentId).fadeIn();
+        $(".menu").fadeIn();
+    });
+});
+
+$(document).ready(function () {
+    $(document).on("click", "#loginright", function () {
+        $(".panelright").toggle("normal");
+        $(this).toggleClass("active");
+        return false;
     });
 });
