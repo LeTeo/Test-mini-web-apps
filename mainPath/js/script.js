@@ -53,6 +53,10 @@ $(function () {
         if (isError === false) {
 
             $('   <tr>                    <td>' + $('#textname').val() + '</td>                    <td>' + $('#textlogin').val() + '</td>                    <td>' + $('#textemail').val() + '</td>                </tr>').insertAfter(".insert");
+            $('#textname').val('');
+            $('#textemail').val('');
+            $('#textlogin').val('');
+            $('#textpassword').val('');
             var contentId = '#section1';
             $('.tab-nav a').removeClass("active");
             $('.tabs .tab-nav a[href=#section1]').addClass("active");
@@ -76,3 +80,4 @@ function addErrorData(element, error) {
     element.parent().addClass("error");
     element.after("<div class='error-data'>" + error + "</div>");
 }
+
